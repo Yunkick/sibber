@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title> 예약하기 </title>
+    <style>
+
+        #ttl {background: seagreen; text-align: center; width: 250px; height: 30px;}
+    </style>
+</head>
+
+<body>
+    <div id = "ttl"> 조윤호의 예약 프로그램 </div>
+    <fieldset>
+        <legend> 조윤호 풋살장 예약 </legend>
+        <form>
+            날짜 : <input type = "date"> &nbsp 주말과 공휴일에는 추가요금이 있습니다 <br> <br>
+            시간 : <input type ="time"> &nbsp 18시 이후에는 추가요금이 있습니다 <br> <br> 
+            구장 선택 : <input type = "checkbox"> A구장 <input type="checkbox"> B구장 &nbsp 중복선택시 사용가능한 구장 자동선택
+        </form>
+    </fieldset>
+        
+    <fieldset>
+        <legend> 이용시간 및 장비대여 </legend>
+        <form>
+            <div class = "dropdown-container">
+                <label for = "times"> 이용시간 : </label> 
+                <select id = "times" name = "times">
+                    <option value="1time"> 한타임 </option>
+                    <option value="2times"> 두타임 </option>
+                    <option value="3times"> 세타임 </option>
+                </select>
+                
+            </div>
+            <div class = "dropdown-container">
+                <label for = "equipment"> 장비대여 : </label>
+                <select id = "equipment" name = "equipment">
+                    <option value= "guard"> 신가드 </option>
+                    <option value="ball"> 공 </option>
+                    <option value="shoe"> 풋살화 </option>
+                    <option value="gloves"> 골기퍼 장갑 </option>
+                    <option value="socks"> 양말 </option>
+                </select>
+
+                <br><br> <span style="background: red;"> 한타임에 2시간 입니다 </span>
+            </div>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend> 에약자 연락처 </legend>
+        <form>
+            이름 : <input type="text" style="width:120px"> <br><br>
+            전화번호 : <input type="tel" pattern="10자리 혹은 11자리 " placeholder=" - 없이 입력" style="width:80px"
+            pattern = "{{0-9}{3}-{0-9}{3-4}-{0-9}{3-4}}" ><br>
+        </form>
+    </fieldset>
+    <hr> <br>
+    <input type = "submit" value="예약하기">
+
+</body>
