@@ -1,19 +1,162 @@
+<html lang ="ko">
+    <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!DOCTYPE html>
-<html>
-<head>
-        <title>조윤호 실습</title>
-    <script>
-        var subject1="Web programing";
-        var subject2="Javascript";
-        function welcome(target) {
-            document.write("Hello " + target);
-        }
-    </script>
-</head>
-<body>
-    <h4> 내부 & 인라인 자바스크립트 작성 </h4>
-    <button onclick = "welcome(subject1);"> 웹프로그래밍 </button>
-    <button onclick = "welcome(subject2);"> 자바스크립트 </button>
-</body>
+            <style>
+                    #clColor{
+                            background-color: lightgray;
+                    }
+    
+                    nav {   
+                            background-color: white;
+                            width: 100%;
+                            height: 50px;
+                            margin-top: 0px;
+                            margin-bottom: 10px;
+                            padding: auto;
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                    }
+
+                    header{
+                        text-align: center;
+                    }
+                    nav>a {
+                            
+                            
+                            color: black;
+                            border-radius:5px;
+                            line-height: 30px;
+                            height: 30px;
+                            width: 100px;
+                            padding: 5px;
+                            text-decoration: none;
+                            transition: background-color 500ms;
+                    }
+                    nav>a:hover {
+                            background-color: lightseagreen;
+                    }
+
+                    nav>a:active {
+                            background-color: lightseagreen;
+                            border-bottom: 3px solid;
+                            border-color: #000;
+
+                    }
+
+                    .dropdown{
+                            color: black;
+                            border-radius:5px;
+                            line-height: 30px;
+                            height: 30px;
+                            width: 100px;
+                            padding: 5px;
+                            text-decoration: none;
+                            transition: background-color 500ms;
+                    }
+                    
+                    nav > a:hover { background: lightseagreen; }
+                    nav > .dropdown { display: inline-block; }
+                    .dropdown-content { display: none;
+                    background: ghostwhite; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   }
+                    .dropdown-content a { display: block; padding: 12px 16px;
+                    text-decoration: none; text-align: center; color: black; }
+                    .dropdown-content a:hover { background: lavender; }
+                    .dropdown:hover .dropdown-content { display: block; }
+                    
+                    table{
+                            border-color:black ;
+                            margin-top: 30px;
+                    margin-bottom: 30px;
+                    margin-left :800px;
+                    border-collapse:collapse;
+                    width: 600px;
+                    }
+
+                
+                    .center1{
+                            height: 100px;
+                            width: 600px;
+                            text-align: center;
+
+                          
+                    }
+                    
+                    .lib{ background-color: skyblue ; margin: 0; padding: 0; width: 250px;
+                                                   }
+
+                    .vb { background: lightsalmon;
+                        left: 0; top: 50px; width: 180px; height: 150px;  padding: 20px; 
+                           
+                    }
+                            
+                    b { display: block;
+                            color: black; padding: 10px 20px; text-decoration: none;   }
+                            b:hover { background: lightseagreen; color: white; }
+                    
+            </style>
+
+    </head>
+    
+    <body style="background-color: moccasin">
+            <header>
+                    <h1>풋살장 예약 201968004 조윤호</h1>
+                    <hr><br>
+            </header>
+
+            <nav>   
+                <div class="dropdown">
+
+                    <a href="#field">풋살장 구장</a>
+                    <div class="dropdown-content">
+                    <a href="#">a구장</a>
+                    <a href="#">b구장</a>
+                    <a href="#">c구장</a>
+                    <a href="#">d구장</a>
+                    </div>
+            </div>  
+                    <a href="#1">1</a>
+                    
+                   
+            </nav>
+
+            <div id ="container">
+                    <div class="lib">
+                            <ul>
+                                    <li>구장 선택</li>
+                                            <ol>
+                                            <li>a 구장</li>
+                                            <li>b 구장</li>
+                                            <li>c 구장</li>
+                                        
+                                    
+                            </ul>
+                    </div>
+                    <div class = "center1">
+                                    <table border ="1" style="height:300px" id="clColor"> <caption>풋살장 시간표</caption>
+                                            <tr> <td> 시 간 </td>           <td>월요일</td>                                         <td>화요일</td>                                         <td>수요일</td>                                    <td>목요일</td>                                      <td>금요일</td>                                 </tr>
+                                            <tr> <td> 08:00 - 10:30 </td>   <td rowspan=7></td>                                    <td rowspan=10></td>                                    <td rowspan =7></td>                              <td rowspan=7></td>                                 <td rowspan=10></td>                            </tr>
+                                            <tr> <td> 10:30 - 12:00 </td>                                                                                                                                                                                                                                                                        </tr>
+                                            <tr> <td> 12:00 - 14:00 </td>                                                                                                                                                                                                                                                                        </tr>
+                                            <tr> <td> 14:00 - 16:00 </td>                                                                                                                                                                                                                                                                        </tr>
+                                            <tr> <td> 16:00 - 18:00 </td>                                                                                                                                                                                                                                                                        </tr>
+                                            <tr> <td> 18:00 - 20:00 </td>                                                                                                                                                                                                                                                                        </tr>
+                                            <tr> <td> 20:00 - 22:00 </td>                                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                                                                                    </tr>
+                                    </table>        
+                                        
+                    </div>
+                                    <div class="vb">
+                                            <b href="#mainscreen">a구장</b>
+                                            <b href="#login">b구장</b>
+                                            <b href="#signup">c구장</b>
+                                            <b href="#refix">d구장</b>
+                                    </div> 
+            </div>
+            
+    </body>
+
 </html>
